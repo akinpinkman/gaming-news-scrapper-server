@@ -27,7 +27,6 @@ app.get("/gamespotnews", (req, res) => {
       const gameSpotArticles = [];
 
       $(".card-item", html)
-        .slice(startIndex, startIndex + limit)
         .each(function () {
           const title = $(this).find(".card-item__title").text();
           const url = gameSpotBaseURL + $(this).find("a").attr("href");
@@ -53,7 +52,6 @@ app.get("/gameinformernews", (req, res) => {
       const gameInformerArticles = [];
 
       $(".views-row", html)
-        .slice(startIndex, startIndex + limit)
         .each(function () {
           const title = $(this).find(".page-title").find("span").text();
           const url = gameInformerBaseURL + $(this).find("a").attr("href");
